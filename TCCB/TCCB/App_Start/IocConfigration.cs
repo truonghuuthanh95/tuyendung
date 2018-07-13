@@ -5,8 +5,6 @@ using System.Web;
 using System.Web.Mvc;
 using TCCB.Repositories.Implements;
 using TCCB.Repositories.Interfaces;
-using TCCB.Respositories.Implements;
-using TCCB.Respositories.Interfaces;
 using Unity;
 using Unity.Lifetime;
 
@@ -42,7 +40,6 @@ namespace TCCB.App_Start
             container.RegisterType<ISchoolDegreeRepository, SchoolDegreeRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<IAccountRepository, AccountRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<IContactInfomationRepository, ContactInformationRepository>(new HierarchicalLifetimeManager());
-            container.RegisterType<ISubjectsRequiredSchoolDegreeRepository, SubjectsRequiredSchoolDegree>(new HierarchicalLifetimeManager());
         }
     }
 }

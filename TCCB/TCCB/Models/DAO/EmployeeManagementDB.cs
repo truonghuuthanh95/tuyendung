@@ -8,7 +8,7 @@ namespace TCCB.Models.DAO
     public partial class EmployeeManagementDB : DbContext
     {
         public EmployeeManagementDB()
-            : base("name=EmployeeManagementDB1")
+            : base("name=EmployeeManagementDB")
         {
             this.Configuration.LazyLoadingEnabled = false;
             this.Configuration.ProxyCreationEnabled = false;
@@ -37,7 +37,6 @@ namespace TCCB.Models.DAO
         public virtual DbSet<SpecializedTraining> SpecializedTrainings { get; set; }
         public virtual DbSet<StatusWorikingInEducation> StatusWorikingInEducations { get; set; }
         public virtual DbSet<Subject> Subjects { get; set; }
-        public virtual DbSet<SubjectRequiredSchoolDegree> SubjectRequiredSchoolDegrees { get; set; }
         public virtual DbSet<TrainningCategory> TrainningCategories { get; set; }
         public virtual DbSet<Ward> Wards { get; set; }
 
